@@ -1,5 +1,4 @@
-const Gentleman = ({ gentleman }) => {
-  const image = `public/img/${gentleman.name}.jpg`;
+const Gentleman = ({ gentleman, image }) => {
   return (
     <li className="gentleman">
       <div className="gentleman__avatar-container">

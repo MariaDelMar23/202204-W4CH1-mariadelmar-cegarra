@@ -1,18 +1,22 @@
-import { useState } from "react";
 import Button from "./components/Button/Button";
 import Gentleman from "./components/Gentleman/Gentleman";
 import Info from "./components/Info/Info";
 import gentlemenList from "./gentlemenList";
 
 function App() {
-  const [gentlemen, setGentlemen] = useState(gentlemenList);
+  const image = "./img/bertin.jpg";
+  // const [gentlemen, setGentlemen] = useState(gentlemenList);
 
-  const checkAll = () => {};
+  // const checkAll = () => {};
 
-  // const printGentlemen = (gentlemen) => {
-  //   gentlemen.forEach(gentleman => {
-  //     <Gentleman gentleman={gentleman}/>
-  //   });
+  // // const printGentlemen = (gentlemen) => {
+  // //   gentlemen.forEach(gentleman => {
+  // //     <Gentleman gentleman={gentleman}/>
+  // //   });
+  // // }
+
+  // const selectGentleman = () => {
+  //   setGentlemen(gentlemen)
   // }
 
   return (
@@ -22,11 +26,11 @@ function App() {
       </header>
       <section className="controls">
         <Info />
-        <Button text="Mostrar todos" action={checkAll} />
+        <Button text="Mostrar todos" /*action={checkAll}*/ />
       </section>
       <main className="main">
         <ul className="gentlemen">
-          <Gentleman gentleman={gentlemen[0]} />
+          <Gentleman gentleman={gentlemenList[0]} image={image} />
         </ul>
       </main>
     </div>
